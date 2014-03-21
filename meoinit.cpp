@@ -32,6 +32,7 @@ int TestMount(std::string dev)
 {
 	std::string cmd;
 	int rc;
+	system("mkdir /media/meoboot");
 	cmd = "mount " + dev + " /media/meoboot > /dev/null 2>&1";
 	rc = system(cmd.c_str());
 	if (access("/media/meoboot/MbootM/.meoboot", F_OK) != 0) {
