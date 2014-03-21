@@ -59,7 +59,7 @@ int main(int argc, char **argv)
 		checkgo = 1;
 	} else if (argc == 2) {
 		tmpstr = string(argv[1]);
-		tmpstr2 = "ubiroot";
+		tmpstr2 = "ubifs";
 		if (tmpstr == tmpstr2)
 			checkgo = 1;
 	
@@ -85,14 +85,7 @@ if (checkgo == 1) {
 	system("mknod /dev/sdd b  8 48");
 	system("mknod /dev/sdd1 b 8 49");
 	system("mknod /dev/sdd2 b 8 50");
-	system("mkdir /dev/input");
-	system("mknod /dev/input/event0 c 13 64");
-	system("mknod /dev/fb0 c 29 0");
-	system("mkdir /dev/fb");
-	system("ln -s ../fb0 /dev/fb/0");
 
-
-	check = system("cat /etc/videomode > /proc/stb/video/videomode");
 	check = system("umount /media/sda1");
 	check = system("umount /media/sdb1");
 	check = system("umount /media/sdc1");
