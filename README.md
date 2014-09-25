@@ -1,4 +1,4 @@
-t3
+EGAMIBoot
 ==
 
-init
+init File Fore Test
