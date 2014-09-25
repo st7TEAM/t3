@@ -1,8 +1,8 @@
-meoinit_SOURCES = meoinit.cpp
+meoinit_SOURCES = egamiinit.cpp
 
-bin_PROGRAMS = meoinit
+bin_PROGRAMS = egamiinit
 
 ACLOCAL_AMFLAGS = -I m4
 
-meoinit_LDADD = -lz
+egamiinit_LDADD = -lz
 
