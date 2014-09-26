@@ -222,23 +222,23 @@ if (checkgo == 1) {
 						}
 						else
 						{							
-							tmpstr = "if [ ! -d \"/media/egamiboot\" ]\; then\n";
+							tmpstr = "if [ ! -d \"/media/egamiboot\" ]\\; then\n";
 							tmpstr += "	mkdir /media/egamiboot\n";
 							tmpstr += "fi\n";
 							tmpstr += "DEVICES1=`find /dev/sd??`\n";
 							tmpstr += "for DEVICE in $DEVICES1;\n";
 							tmpstr += "	do\n";
-							tmpstr += "	if [ ! -e /media/egamiboot/EgamiBootI/.egamiboot  ]\; then\n";
+							tmpstr += "	if [ ! -e /media/egamiboot/EgamiBootI/.egamiboot  ]\\; then\n";
 							tmpstr += "		mount $DEVICE /media/egamiboot\n";
 							tmpstr += "	fi\n";
-							tmpstr += "	if [ ! -e /media/egamiboot/EgamiBootI/.egamiboot  ]\; then\n";
+							tmpstr += "	if [ ! -e /media/egamiboot/EgamiBootI/.egamiboot  ]\\; then\n";
 							tmpstr += "		umount /media/egamiboot\n";
 							tmpstr += "	else\n";
 							tmpstr += "		break\n";
 							tmpstr += "	fi\n";
 							tmpstr += "	done\n";
 							tmpstr += "umount " + mydir + "\n";
-							tmpstr += "if ! mountpoint -q" + mydir + "\; then\n";
+							tmpstr += "if ! mountpoint -q" + mydir + "\\; then\n";
         					tmpstr += "rm -r " + mydir + "\n";
         					tmpstr += "mkdir " + mydir + "\n";
         					tmpstr += "mount $DEVICE " + mydir + "\n";
